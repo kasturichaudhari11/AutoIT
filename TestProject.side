@@ -1,0 +1,107 @@
+{
+  "id": "3ec8cee0-88e1-4073-8efd-9b0e1a80d9da",
+  "version": "2.0",
+  "name": "TestProject",
+  "url": "https://www.simplilearn.com/",
+  "tests": [{
+    "id": "97ba3d41-f735-44b5-b359-7037a29d06e3",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "3d8fbd58-8b1f-4af2-bd6e-78db7fa3cb98",
+    "name": "LoginTest",
+    "commands": [{
+      "id": "d6f01121-4d94-4b78-976f-c7d125f04474",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.simplilearn.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db46be56-46ff-484c-b513-9c489f643420",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1311x784",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "015d510a-c7c0-4d39-9eb6-f4a9b8d9fca3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Log in",
+      "targets": [
+        ["linkText=Log in", "linkText"],
+        ["css=.login", "css:finder"],
+        ["xpath=//a[contains(text(),'Log in')]", "xpath:link"],
+        ["xpath=//header[@id='topHeader']/div/nav[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://lms.simplilearn.com')]", "xpath:href"],
+        ["xpath=//nav[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3e093d8-d6d3-40f1-8e07-f01426301858",
+      "comment": "",
+      "command": "type",
+      "target": "name=user_login",
+      "targets": [
+        ["name=user_login", "name"],
+        ["css=.email", "css:finder"],
+        ["xpath=//input[@name='user_login']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "abc@xyz.com"
+    }, {
+      "id": "f8f69b5f-7035-4c71-ab13-d75e2b5ed234",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=user_pwd", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "9d48c0a0-7c88-4787-9266-862af808efd1",
+      "comment": "",
+      "command": "click",
+      "target": "name=btn_login",
+      "targets": [
+        ["name=btn_login", "name"],
+        ["css=.btn-signup:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='btn_login']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d87356fc-acfc-4bfd-b303-9dc3c81c166a",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=msg_box",
+      "targets": [
+        ["id=msg_box", "id"],
+        ["css=#msg_box", "css:finder"],
+        ["xpath=//div[@id='msg_box']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": "The email or password you have entered is invalid."
+    }]
+  }],
+  "suites": [{
+    "id": "fb5e2e3f-0006-4862-9cd1-8faa54020d82",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["97ba3d41-f735-44b5-b359-7037a29d06e3"]
+  }],
+  "urls": [],
+  "plugins": []
+}
